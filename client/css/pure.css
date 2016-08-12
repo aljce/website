@@ -1,0 +1,8 @@
+.top-menu {
+    text-align: center;
+}
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: Consolas;
+}

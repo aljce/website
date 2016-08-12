@@ -1,0 +1,14 @@
+{
+  "name": "client",
+  "homepage": "https://github.com/mckeankylej/website",
+  "authors": [
+    "Kyle McKean <mckean.kylej@gmail.com>"
+  ],
+  "description": "frontend for Kyle McKean's Website",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "pure": "^0.6.0"
+  }
+}

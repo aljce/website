@@ -1,4 +1,4 @@
-{ nixpkgs ? import <nixpkgs> {}, compiler ? "ghc7103" }:
+{ nixpkgs ? import <nixpkgs> {}, compiler ? "ghc801" }:
 
 let
 
@@ -6,7 +6,7 @@ let
 
   f = { mkDerivation, aeson, base, monad-logger, mtl, persistent
       , persistent-postgresql, persistent-template, servant-server
-      , stdenv, wai, warp
+      , stdenv, wai, warp, postgresql, openssl
       }:
       mkDerivation {
         pname = "server";
@@ -16,10 +16,10 @@ let
         isExecutable = true;
         libraryHaskellDepends = [
           aeson base mtl persistent persistent-postgresql persistent-template
-          servant-server wai warp
+          servant-server wai warp postgresql openssl
         ];
         executableHaskellDepends = [
-          base monad-logger persistent-postgresql warp
+          base monad-logger persistent-postgresql warp postgresql openssl
         ];
         testHaskellDepends = [ base ];
         homepage = "https://github.com/mckeankylej/server#readme";

@@ -13,13 +13,21 @@ import Control.Monad.Reader
 import Database.Persist.Postgresql
 import Database.Persist.TH  (mkMigrate, mkPersist, persistLowerCase, share, sqlSettings)
 
+import Data.Time.Calendar
+import Data.Text
+
 import Types
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
 
 User json
-    name  String
-    email String
+    name  Text
+    email Text
+    deriving Show
+
+BlogPost json
+    content Text
+    uploadDate Day
     deriving Show
 
 |]

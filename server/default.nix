@@ -16,7 +16,7 @@ let
         isExecutable = true;
         libraryHaskellDepends = [
           aeson base mtl persistent persistent-postgresql persistent-template
-          servant-server wai warp postgresql openssl
+          servant-server wai warp postgresql.lib openssl
         ];
         executableHaskellDepends = [
           base monad-logger persistent-postgresql warp postgresql openssl

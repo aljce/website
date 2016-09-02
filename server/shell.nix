@@ -9,5 +9,6 @@ haskell.lib.buildStackProject {
       ncurses
       cabal-install
       git
-      postgresql ];
+      postgresql
+      postgresql.lib  ];
 }
